@@ -11,6 +11,8 @@
 		484743BE200299DE00875DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484743BC200299DE00875DE2 /* Main.storyboard */; };
 		484743C0200299DE00875DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484743BF200299DE00875DE2 /* Assets.xcassets */; };
 		484743C3200299DE00875DE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484743C1200299DE00875DE2 /* LaunchScreen.storyboard */; };
+		484743CB2002A0B000875DE2 /* FlexiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484743CA2002A0B000875DE2 /* FlexiViewController.swift */; };
+		484743CD2002B40E00875DE2 /* GoFizzBuzzBazz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484743CC2002B40E00875DE2 /* GoFizzBuzzBazz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		484743BF200299DE00875DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		484743C2200299DE00875DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		484743C4200299DE00875DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		484743CA2002A0B000875DE2 /* FlexiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexiViewController.swift; sourceTree = "<group>"; };
+		484743CC2002B40E00875DE2 /* GoFizzBuzzBazz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoFizzBuzzBazz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				484743BF200299DE00875DE2 /* Assets.xcassets */,
 				484743C1200299DE00875DE2 /* LaunchScreen.storyboard */,
 				484743C4200299DE00875DE2 /* Info.plist */,
+				484743CA2002A0B000875DE2 /* FlexiViewController.swift */,
+				484743CC2002B40E00875DE2 /* GoFizzBuzzBazz.swift */,
 			);
 			path = "Flexi-FizzBuzzBazz";
 			sourceTree = "<group>";
@@ -133,7 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484743CD2002B40E00875DE2 /* GoFizzBuzzBazz.swift in Sources */,
 				484743B9200299DE00875DE2 /* AppDelegate.swift in Sources */,
+				484743CB2002A0B000875DE2 /* FlexiViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
