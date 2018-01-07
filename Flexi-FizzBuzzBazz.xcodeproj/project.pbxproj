@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		484743B9200299DE00875DE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484743B8200299DE00875DE2 /* AppDelegate.swift */; };
-		484743BB200299DE00875DE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484743BA200299DE00875DE2 /* ViewController.swift */; };
 		484743BE200299DE00875DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484743BC200299DE00875DE2 /* Main.storyboard */; };
 		484743C0200299DE00875DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484743BF200299DE00875DE2 /* Assets.xcassets */; };
 		484743C3200299DE00875DE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484743C1200299DE00875DE2 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		484743B5200299DE00875DE2 /* Flexi-FizzBuzzBazz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flexi-FizzBuzzBazz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		484743B8200299DE00875DE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		484743BA200299DE00875DE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		484743BD200299DE00875DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		484743BF200299DE00875DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		484743C2200299DE00875DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				484743B8200299DE00875DE2 /* AppDelegate.swift */,
-				484743BA200299DE00875DE2 /* ViewController.swift */,
 				484743BC200299DE00875DE2 /* Main.storyboard */,
 				484743BF200299DE00875DE2 /* Assets.xcassets */,
 				484743C1200299DE00875DE2 /* LaunchScreen.storyboard */,
@@ -136,7 +133,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				484743BB200299DE00875DE2 /* ViewController.swift in Sources */,
 				484743B9200299DE00875DE2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +277,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "kchindev.Flexi-FizzBuzzBazz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -296,7 +292,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "kchindev.Flexi-FizzBuzzBazz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
