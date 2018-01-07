@@ -27,6 +27,24 @@ class FlexiViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         addInuptView()
         addRunResultView(previousControl: bazzInputText)
+        addOnScreenKeyboardDoneButton()
+    }
+
+    func addOnScreenKeyboardDoneButton() {
+        let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
+        let leftFlexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
+        toolbar.setItems([leftFlexibleSpace, doneButton], animated: false)
+        toolbar.sizeToFit()
+        fizzInputText.inputAccessoryView = toolbar
+        buzzInputText.inputAccessoryView = toolbar
+        bazzInputText.inputAccessoryView = toolbar
+        startInputText.inputAccessoryView = toolbar
+        endInputText.inputAccessoryView = toolbar
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true) // Dismiss keyboard
     }
     
     private let inputContainerView = UIView()
