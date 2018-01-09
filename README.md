@@ -15,3 +15,6 @@ The user interface is laid out and implemented in code without using storyboard.
   - Implements the **_FizzBuzzBazz_** logic
 - AppDelegate.swift
   - Implements the entry ponit to the FlexiViewController user interface.
+
+### Sample iPhone X Screenshot
+![fizzbuzzbazzonx20](https://user-images.githubusercontent.com/19395671/34739367-ea173c58-f530-11e7-99cd-07986262df4c.jpg)
