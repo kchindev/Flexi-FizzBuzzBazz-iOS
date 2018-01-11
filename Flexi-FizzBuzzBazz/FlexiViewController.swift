@@ -33,7 +33,8 @@ class FlexiViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func addOnScreenKeyboardDoneButton() {
         let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
         let leftFlexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
+        //let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissKeyboard))
         toolbar.setItems([leftFlexibleSpace, doneButton], animated: false)
         toolbar.sizeToFit()
         fizzInputText.inputAccessoryView = toolbar
@@ -177,7 +178,7 @@ class FlexiViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         resultTable.reloadData()
     }
     
-    // Option picker for Bazz
+    // MARK: Option picker for Bazz
     private let bazzOptionValues = ["(Not in use)", "Less than", "Equal to", "Greater than"]
     private var bazzOptionInx = 0
     func setupBazzOptionPicker(previousControl: UIView?, containerView: UIView, margins: UILayoutGuide) {
@@ -236,7 +237,7 @@ class FlexiViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         bazzOptionInx = row
     }
     
-    
+    // MARK: General input setup function
     func setupInputLabelandField(label: UILabel, labelText: String, inputField: UITextField, previousTextField: UITextField?, parentView: UIView, margins: UILayoutGuide) {
         label.text = labelText
         label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
@@ -295,27 +296,23 @@ class FlexiViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         resultContainerView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
         resultContainerView.widthAnchor.constraint(equalTo: margins.widthAnchor).isActive = true
         
-        resultTable = UITableView(frame: CGRect(x:0,y:0,width:layoutWidth * 0.9,height:  resultContainerView.frame.size.height), style: UITableViewStyle.plain) // Height will be adjusted in runtime in setPortraitLayout() because the container view height has not been established at this time.
-        resultTable.delegate      =   self
-        resultTable.dataSource    =   self
-        resultTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        resultTable = UITableView(frame: CGRect(x:0, y:0, width:layoutWidth * 0.9, height:  resultContainerView.frame.size.height), style: UITableViewStyle.plain) // Height will be adjusted in runtime in setPortraitLayout() because the container view height has not been established at this time.
+        resultTable.delegate = self
+        resultTable.dataSource = self
+        resultTable.register(UITableViewCell.self, forCellReuseIdentifier: "ResultItemCell")
         resultTable.translatesAutoresizingMaskIntoConstraints = false
         resultContainerView.addSubview(resultTable)
     }
     
-    // Result Table View delegates
+    // MARK: Result Table View delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resultData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell=UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
-        cell.textLabel!.text = resultData [indexPath.row]
+        let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "ResultItemCell")
+        cell.textLabel!.text = resultData[indexPath.row]
         return cell;
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(resultData[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
